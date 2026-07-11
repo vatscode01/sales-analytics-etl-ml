@@ -1,6 +1,5 @@
 import pandas as pd
 import os
-from pathlib import Path
 
 raw_file_path = '/Users/aady/Desktop/Ayush Vats/ETL Pipeline Project/data/raw'
 raw_files = []
@@ -16,16 +15,20 @@ for x in obj:
 def get_amazon_data():
     for name,path in raw_files:
         if(name.startswith('Amazon')):
-            return path
-        
+            df = pd.read_csv(path)
+            # print(df.head())
+            return df
+
 
 def get_sales_data():
     for name,path in raw_files:
         if(name.startswith('Sale')):
-            return path
+            df = pd.read_csv(path)
+            return df
         
 
 def get_cloud_warehouse_data():
     for name,path in raw_files:
         if(name.startswith('Cloud')):
-            return path
+            df = pd.read_csv(path)
+            return df
