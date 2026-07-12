@@ -1,0 +1,7 @@
+Loaded amazon database
+
+cleaned the database
+
+Removed duplicated rows
+
+Saved the transformed file into data/cleaned
