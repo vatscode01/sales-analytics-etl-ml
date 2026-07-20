@@ -18,17 +18,12 @@ df['amount'] = df['amount'].apply(lambda x: abs(x))
 
 # Saved the cleaned data
 location = '/Users/aady/Desktop/Ayush Vats/ETL Pipeline Project/data/cleaned'
-df.to_csv(location + '/cleaned.csv')
+df.to_csv(location + '/cleaned.csv' , index = False)
 
 print("Saved cleaned csv file in data/cleaned")
 
 # Data Partition
 df_amazon = df[['index','order_id','date','status','sales_channel','amount']]
-df_amazon.to_csv(location + '/amazon_main.csv')
+df_amazon.to_csv(location + '/amazon_main.csv', index = False)
 
-
-
-
-# def transformed_data():
-#     return df;
 
