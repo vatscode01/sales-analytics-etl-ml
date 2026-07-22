@@ -22,7 +22,7 @@ df.to_csv(location + '/cleaned.csv' , index = False)
 
 print("Saved cleaned csv file in data/cleaned")
 
-# Data Partition        #amazon_data
+# Data Partition        #amazon_data 
 df_amazon = df[['index','order_id','date','status','sales_channel','amount']]
 df_amazon.to_csv(location + '/amazon_main.csv', index = False)
 
